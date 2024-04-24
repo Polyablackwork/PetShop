@@ -1,14 +1,15 @@
 /************ Global Styles and Main Page ************/
 
-:root {
-    --main-color: #170c04;
-    --orange-color: #e27b3a;
-  }
-  
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  :root {
+    --main-color: #170c04;
+    --orange-color: #e27b3a;
+    --white-color: #FFFFFF;
   }
   
   body {
@@ -33,7 +34,7 @@
     margin: 0 auto;
   }
   
-  .header__top {
+  .header__wrapper {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
@@ -71,21 +72,29 @@
   .nav a {
     color: var(--main-color);
   }
+
+  @media (min-width: 769px) {
+    /* Приховання "Search" "Cart" */
+    .nav-item:nth-last-child(2), 
+    .nav-item:last-child {
+        display: none;
+    }
+}
   
   .menu {
     display: flex;
     gap: 35px;
   }
   
-  .headline {
+  .main-section {
     margin-bottom: 200px;
   }
   
-  .headline>.container {
+  .main-section>.container {
     position: relative;
   }
   
-  .headline__title {
+  .main__title {
     max-width: 613px;
     padding-top: 170px;
     font-family: Poppins, sans-serif;
@@ -96,12 +105,12 @@
     z-index: 3;
   }
 
-  .headline__btn {
+  .main__btn {
   display: inline-block;
   margin: 50px 20px 0 0;
   padding: 12px 30px;
   border-radius: 24px;
-  background:  var(--orange-color);
+  background: var(--orange-color);
   color: #ffffff;
   border: 1px solid rgb(226, 123, 58, 0.15);
   font-family: Roboto;
@@ -109,7 +118,7 @@
   line-height: 24px;
 }
 
-.care__article-btn {
+.dog-care-btn {
   display: inline-block;
   margin: 50px 20px 0 0;
   padding: 12px 30px;
@@ -122,13 +131,13 @@
   line-height: 24px;
 }
 
-.headline__btn:hover {
+.main__btn:hover {
   background-color: #fff;
   color: var(--orange-color);
   border: 1px solid rgb(226, 123, 58, 0.15);
 }
 
-.care__article-btn:hover {
+.dog-care-btn:hover {
   background-color: var(--orange-color);
   color: #fff;
 }
@@ -137,16 +146,16 @@
   margin-right: 0;
 }
 
-.headline__img {
-    max-width: 900px;
-    width: 80%;
-    position: absolute;
-    right: -100px;
-    top: 0;
-    background-repeat: no-repeat;
-    z-index: 2;
+.main__img {
+  max-width: 900px;
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  right: -100px;
+  top: 0;
+  background-repeat: no-repeat;
+  z-index: 2;
   }
-
 
   .product__content {
     display: flex;
@@ -195,7 +204,7 @@
   }
 
 
-.product__inner-btn {
+.product-btn {
   margin: 0 110px 18px;
   color: var(--orange-color);
   font-weight: 400;
@@ -804,7 +813,7 @@
 /*########### Laptop ###########*/
 
 @media (max-width: 1310px) {
-  .headline__img {
+  .main__img {
     max-width: 720px;
     right: 0;
   }
@@ -829,19 +838,19 @@
 
 /* ////// */
 @media (max-width: 1150px) {
-  .headline {
+  .main-section{
     margin-left: 50px;
     margin-bottom: 130px;
   }
 
-  .headline__title {
+  .main__title {
     max-width: 502px;
     font-size: 85px;
     padding-top: 90px;
     line-height: 100px;
   }
 
-  .headline__img {
+  .main__img {
     max-width: 630px;
     right: 5px;
   }
@@ -920,12 +929,12 @@
 
 /* ////////// */
 @media (max-width: 1000px) {
-  .headline__img {
+  .main__img {
     max-width: 540px;
     right: 0;
   }
 
-  .headline__title {
+  .main__title {
     font-size: 75px;
   }
 
@@ -985,21 +994,27 @@
 
 /*########### Tablet ###########*/
 
-/* //////////// */
+
 @media (max-width: 880px) {
-  .headline__title {
+
+.main__title {
+    text-align: left;
     max-width: 375px;
     padding-top: 50px;
-    font-size: 65px;
-  }
+    font-size: 64px;
+}
 
-  .headline__img {
+.main__img {
     max-width: 480px;
-  }
+}
 
-  .headline__btn {
-    padding: 12px 20px;
-  }
+.main__btn {
+    padding: 12px 80px;
+}
+
+.popular__btn {
+  padding: 12px 120px;
+}
 
   .popular__first-row {
     flex-wrap: wrap;
@@ -1049,22 +1064,22 @@
 
 /* ///////////// */
 @media (max-width: 800px) {
-  .headline {
+  .main-section {
     margin-left: 35px;
   }
 
-  .headline__title {
+  .main__title {
     font-size: 55px;
     max-width: 350px;
     padding-top: 35px;
   }
 
-  .headline__img {
+  .main__img {
     max-width: 400px;
     right: 0;
   }
 
-  .headline__btn {
+  .main__btn {
     margin-top: 40px;
   }
 
@@ -1101,6 +1116,11 @@
 
 /* ///////////// */
 @media (max-width: 700px) {
+
+  .container {
+    flex-direction: column;
+  }
+
   .nav-btn {
     display: block;
     width: 23px;
@@ -1119,7 +1139,7 @@
     width: 100%;
     height: 2px;
     background-color: rgba(0, 0, 0, 1);
-    transition: .3s ease-in;
+    transition: .5s linear;
   }
 
   .btn-line:nth-child(1) {
@@ -1160,42 +1180,62 @@
     left: 0;
     top: 0;
     bottom: 0;
-    right: 0;
+    width: 280px; 
     background-color: var(--orange-color);
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-size: 35px;
+    align-items: flex-start; 
+    font-size: 24px;
     font-weight: 500;
-    transform: translateY(-150%);
-    transition: .3s ease-in;
+    transform: translateX(-100%); 
+    transition: transform 0.5s ease-in; 
+    flex-direction: column; 
   }
 
-  .nav-open .nav {
-    transform: translateY(0%);
+.nav-open .nav {
+    transform: translateX(0); 
   }
 
-  .logo,
-  .menu {
+.nav a {
+    padding-left: 20px;
+  }
+
+  .logo {
     position: relative;
     z-index: 30;
   }
 
-  .headline__title {
+  .menu {
+    display: none;
+  }
+
+  .main__title {
+    text-align: left;
     font-size: 50px;
     max-width: 290px;
     line-height: 65px;
   }
 
-  .headline__img {
+  .main__img {
     max-width: 330px;
-    top: 10px;
+    top: 0px;
+    margin: 100 auto; 
+    z-index: 2;
   }
 
-  .headline__btn {
+  .main__btn {
+    display: block; 
     font-size: 14px;
-    padding: 9px 17px;
+    text-align: center;
+}
+
+  .popular__btn {
+  display: block; 
+  text-align: center;
+}
+
+  .dog-care-btn {
+    display: none;
   }
 
   .product__content {
@@ -1267,14 +1307,14 @@
 
 /*########### Mobile Large ###########*/
 
-/* //////////// */
+
 @media (max-width: 600px) {
-  .headline__title {
+  .main__title {
     max-width: 225px;
     font-size: 42px;
   }
 
-  .headline__img {
+  .main__img {
     max-width: 285px;
   }
 
@@ -1286,9 +1326,13 @@
     margin-bottom: 30px;
   }
 
-  .care__article-btn,
+  .dog-care-btn,
   .work__inner-btn {
     margin-top: 30px;
+  }
+
+  .dog-care-btn {
+    display: none;
   }
 
   .feedback__btn {
@@ -1312,13 +1356,17 @@
 
 /* ////////////// */
 @media (max-width: 500px) {
-  .headline__title {
+  .main__title {
     max-width: 210px;
     font-size: 37px;
   }
 
-  .headline__img {
+  .main__img {
     max-width: 245px;
+  }
+
+  .dog-care-btn{
+    display: none;
   }
 
   .work {
@@ -1383,12 +1431,12 @@
 
 /* //////////// */
 @media (max-width: 450px) {
-  .headline__title {
+  .main__title {
     font-size: 30px;
     line-height: 55px;
   }
 
-  .headline__img {
+  .main__img {
     max-width: 220px;
   }
 
@@ -1402,10 +1450,14 @@
   }
 
   .popular__btn,
-  .care__article-btn,
+  .dog-care-btn,
   .work__inner-btn {
     padding: 9px 14px;
     font-size: 14px;
+  }
+
+  .dog-care-btn {
+    display: none;
   }
 
   .feedback {
@@ -1433,10 +1485,10 @@
 
 /*########### Mobile Medium ###########*/
 
-/* ////////////// */
 @media (max-width: 370px) {
-  .headline {
+  .main-section {
     margin-left: 20px;
+  
   }
 
   .product__inner-title {

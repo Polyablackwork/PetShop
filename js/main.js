@@ -1,7 +1,7 @@
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'vertical',
-    speed: 600,
+    speed: 650,
     loop: true,
    
     // Navigation arrows
@@ -11,15 +11,6 @@ const swiper = new Swiper('.swiper', {
     },
   
     autoplay: window.innerWidth < 500,
-  
-    // breakpoints: {
-    //    500: {
-    //     autoplay: false
-    //   },
-    //   499: {
-    //     autoplay: true 
-    //   }
-    // },
   });
 
   let a = document.querySelectorAll('a');
@@ -34,7 +25,7 @@ for (let element of a) {
 }
 
 const btn = document.querySelector('.nav-btn');
-const header = document.querySelector('.header__top');
+const header = document.querySelector('.header__wrapper');
 
 btn.addEventListener('click', function () {
   header.classList.toggle('nav-open');
