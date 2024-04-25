@@ -245,7 +245,8 @@
   gap: 30px;
 }
 
-.popular__first-wrapper {
+.popular__first-wrapper, 
+.popular__second-wrapper {
   margin-bottom: 66px;
 }
 
@@ -1404,6 +1405,7 @@
 
   .message__content {
     left: 10%;
+
   }
 
   .message__wrapper {
@@ -1420,7 +1422,6 @@
     flex-direction: column;
     width: 88%;
     margin: 0 auto; 
-    max-width: 600px;
   }
 
   .message__form-box,
