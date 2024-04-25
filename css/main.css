@@ -1425,12 +1425,13 @@
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    margin-left: 8%;
+    margin-left: 6%;
+    margin-right: 6%;
   }
 
   .message__form-box,
   .message__form-btn {
-    height: 40px;
+    height: 60px;
   }
 
   .message__form-box {
