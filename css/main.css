@@ -285,7 +285,7 @@
 }
 
 .popular__wrap-follow,
-.work__inner-follow {
+.work__wrap-follow {
   display: block;
   color: var(--orange-color);
   font-weight: 400;
@@ -1233,7 +1233,7 @@
     width: 100%;
     font-size: 14px;
     text-align: center;
-    margin-top: 100px; 
+    margin-top: 80px; 
 }
 
   .popular__btn {
@@ -1362,7 +1362,7 @@
   }
 
   .feedback__wrapper {
-    max-width: 450px;
+    max-width: 100%;
   }
 
   .svg {
@@ -1424,7 +1424,7 @@
   .message__form {
     display: flex;
     flex-direction: column;
-    max-width: 280px;
+    max-width: 100%;
     margin-left: 8%;
   }
 
