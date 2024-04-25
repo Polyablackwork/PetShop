@@ -1010,6 +1010,7 @@
 
 .main__btn {
     padding: 12px 80px;
+    margin-top: 50px; 
 }
 
 .popular__btn {
@@ -1209,6 +1210,10 @@
     display: none;
   }
 
+  .main-section {
+    margin-left: 0px;
+  }
+
   .main__title {
     text-align: left;
     font-size: 50px;
@@ -1228,6 +1233,7 @@
     width: 100%;
     font-size: 14px;
     text-align: center;
+    margin-top: 100px; 
 }
 
   .popular__btn {
@@ -1267,7 +1273,7 @@
   }
 
   .feedback__wrap {
-    max-width: 485px;
+    width: 100%;
   }
 
   .feedback__wrap-author,
