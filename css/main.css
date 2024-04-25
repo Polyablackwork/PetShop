@@ -1418,9 +1418,9 @@
   .message__form {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-left: 6%;
-    margin-right: 6%;
+    width: 88%;
+    margin: 0 auto; 
+    max-width: 600px;
   }
 
   .message__form-box,
